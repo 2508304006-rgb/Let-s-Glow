@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Let's Glow — Premium skincare brand offering scientifically formulated products designed to enhance your natural beauty.">
+    <title>Let's Glow | Reveal Your Natural Radiance</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ======================== PARTICLE CANVAS ======================== -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ======================== GRAIN TEXTURE OVERLAY ======================== -->
+    <div class="grain-overlay"></div>
+
+    <!-- ======================== NAVIGATION ======================== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">✦</span> Let's Glow
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO SECTION ======================== -->
+    <header id="hero" class="hero" data-parallax="0.4">
+        <div class="hero-content">
+            <p class="hero-tagline animate-on-scroll fade-down">✦ Premium Skincare Innovation</p>
+            <h1 class="hero-title animate-on-scroll fade-up">
+                Reveal Your<br>
+                <span class="title-accent">Natural Radiance</span>
+            </h1>
+            <p class="hero-description animate-on-scroll fade-up delay-1">
+                Scientifically formulated and dermatologically tested products<br>
+                crafted to unveil the most luminous version of you.
+            </p>
+            <a href="#products" class="btn btn-primary animate-on-scroll fade-up delay-2">
+                Explore Collection
+                <span class="btn-arrow">→</span>
+            </a>
+        </div>
+
+        <!-- Animated Hero Visual -->
+        <div class="hero-visual animate-on-scroll fade-left delay-1">
+            <div class="hero-glow-ring"></div>
+            <div class="hero-product-display">
+                <div class="hero-bottle">
+                    <div class="bottle-cap"></div>
+                    <div class="bottle-neck"></div>
+                    <div class="bottle-body">
+                        <div class="bottle-label">
+                            <span class="bottle-brand">LG</span>
+                            <span class="bottle-name">Radiance</span>
+                            <span class="bottle-type">Serum</span>
+                        </div>
+                    </div>
+                    <div class="bottle-base"></div>
+                </div>
+            </div>
+            <div class="hero-floating-dots">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- ======================== ABOUT SECTION ======================== -->
+    <section id="about" class="section about" data-parallax="0.2">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll fade-right">
+                    <div class="about-img-container">
+                        <div class="about-visual">
+                            <div class="about-leaf leaf-1">🌿</div>
+                            <div class="about-leaf leaf-2">🍃</div>
+                            <div class="about-circle circle-1"></div>
+                            <div class="about-circle circle-2"></div>
+                            <div class="about-circle circle-3"></div>
+                            <div class="about-text-badge">Est. 2020</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label animate-on-scroll fade-up">Our Story</span>
+                    <h2 class="section-title animate-on-scroll fade-up delay-1">
+                        Where Science Meets<br><span class="text-accent">Natural Beauty</span>
+                    </h2>
+                    <p class="about-text animate-on-scroll fade-up delay-2">
+                        At Let's Glow, we believe that radiant skin begins with thoughtful science. Our formulations blend 
+                        the finest botanical ingredients with cutting-edge dermatological research, creating products that 
+                        deliver visible results while nurturing your skin's natural vitality.
+                    </p>
+                    <p class="about-text animate-on-scroll fade-up delay-3">
+                        Every product undergoes rigorous testing, ensuring safety, efficacy, and the luxurious sensorial 
+                        experience our clients expect. From our sustainably sourced ingredients to our elegantly designed 
+                        packaging — every detail reflects our unwavering commitment to excellence.
+                    </p>
+                    <div class="about-stats animate-on-scroll fade-up delay-3">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Natural Ingredients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Cruelty Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== PRODUCTS SECTION ======================== -->
+    <section id="products" class="section products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label animate-on-scroll fade-up">The Collection</span>
+                <h2 class="section-title animate-on-scroll fade-up delay-1">
+                    Curated for Your <span class="text-accent">Skin</span>
+                </h2>
+                <p class="section-subtitle animate-on-scroll fade-up delay-2">
+                    Discover our signature range of scientifically-formulated skincare essentials.
+                </p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1: Face Serum -->
+                <div class="product-card animate-on-scroll fade-up delay-1" id="product-serum">
+                    <div class="product-image-wrapper">
+                        <div class="product-img product-img-serum">
+                            <div class="product-bottle serum-bottle">
+                                <div class="p-bottle-cap serum-cap"></div>
+                                <div class="p-bottle-neck serum-neck"></div>
+                                <div class="p-bottle-body serum-body">
+                                    <div class="p-label">
+                                        <span class="p-label-brand">Let's Glow</span>
+                                        <span class="p-label-name">Revitalizing</span>
+                                        <span class="p-label-type">Face Serum</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-badge">Bestseller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Revitalizing Face Serum</h3>
+                        <p class="product-desc">
+                            A potent blend of hyaluronic acid and vitamin C that deeply penetrates to restore 
+                            youthful luminosity and diminish fine lines.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">$68.00</span>
+                            <a href="#" class="btn btn-outline btn-sm">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Moisturizer -->
+                <div class="product-card animate-on-scroll fade-up delay-2" id="product-moisturizer">
+                    <div class="product-image-wrapper">
+                        <div class="product-img product-img-moisturizer">
+                            <div class="product-jar">
+                                <div class="jar-lid"></div>
+                                <div class="jar-body">
+                                    <div class="p-label">
+                                        <span class="p-label-brand">Let's Glow</span>
+                                        <span class="p-label-name">Hydrating</span>
+                                        <span class="p-label-type">Moisturizer</span>
+                                    </div>
+                                </div>
+                                <div class="jar-base"></div>
+                            </div>
+                        </div>
+                        <div class="product-badge badge-new">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Hydrating Moisturizer</h3>
+                        <p class="product-desc">
+                            An ultra-rich yet feather-light cream infused with ceramides and shea butter, 
+                            delivering 72-hour deep hydration for supple, dewy skin.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">$54.00</span>
+                            <a href="#" class="btn btn-outline btn-sm">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Suncream -->
+                <div class="product-card animate-on-scroll fade-up delay-3" id="product-suncream">
+                    <div class="product-image-wrapper">
+                        <div class="product-img product-img-suncream">
+                            <div class="product-tube">
+                                <div class="tube-cap"></div>
+                                <div class="tube-body">
+                                    <div class="p-label">
+                                        <span class="p-label-brand">Let's Glow</span>
+                                        <span class="p-label-name">Protective</span>
+                                        <span class="p-label-type">SPF 50</span>
+                                    </div>
+                                </div>
+                                <div class="tube-bottom"></div>
+                            </div>
+                        </div>
+                        <div class="product-badge badge-spf">SPF 50</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Protective Suncream SPF 50</h3>
+                        <p class="product-desc">
+                            Broad-spectrum UV defense with a weightless, non-greasy formula enriched 
+                            with antioxidants for complete daily sun protection.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">$42.00</span>
+                            <a href="#" class="btn btn-outline btn-sm">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== BENEFITS SECTION ======================== -->
+    <section id="benefits" class="section benefits" data-parallax="0.15">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label animate-on-scroll fade-up">Why Let's Glow</span>
+                <h2 class="section-title animate-on-scroll fade-up delay-1">
+                    The <span class="text-accent">Benefits</span> You Deserve
+                </h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll fade-up delay-1" id="benefit-hydration">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 64 64" class="icon-animated">
+                            <path d="M32 6 C32 6 12 28 12 40 C12 51 21 58 32 58 C43 58 52 51 52 40 C52 28 32 6 32 6Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M24 40 C24 40 28 48 36 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Deep Hydration</h3>
+                    <p class="benefit-desc">Multi-layered moisture technology locks in hydration for up to 72 hours, leaving skin plump and dewy.</p>
+                </div>
+
+                <div class="benefit-card animate-on-scroll fade-up delay-2" id="benefit-sun">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 64 64" class="icon-animated">
+                            <circle cx="32" cy="32" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                            <line x1="32" y1="4" x2="32" y2="14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="32" y1="50" x2="32" y2="60" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="4" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="50" y1="32" x2="60" y2="32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="12" y1="12" x2="19" y2="19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="45" y1="45" x2="52" y2="52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="12" y1="52" x2="19" y2="45" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="45" y1="19" x2="52" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Sun Protection</h3>
+                    <p class="benefit-desc">Advanced broad-spectrum formulas shield your skin against UVA and UVB damage throughout the day.</p>
+                </div>
+
+                <div class="benefit-card animate-on-scroll fade-up delay-3" id="benefit-aging">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 64 64" class="icon-animated">
+                            <path d="M20 44 C20 44 24 52 32 52 C40 52 44 44 44 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M32 8 L32 36" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M22 18 L32 8 L42 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="20" cy="36" r="3" fill="currentColor" opacity="0.4"/>
+                            <circle cx="44" cy="36" r="3" fill="currentColor" opacity="0.4"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Anti-Aging Care</h3>
+                    <p class="benefit-desc">Powerful retinol and peptide complexes target fine lines and promote skin's natural renewal process.</p>
+                </div>
+
+                <div class="benefit-card animate-on-scroll fade-up delay-4" id="benefit-bright">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 64 64" class="icon-animated">
+                            <polygon points="32,4 38,24 58,24 42,36 48,56 32,44 16,56 22,36 6,24 26,24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Skin Brightening</h3>
+                    <p class="benefit-desc">Vitamin C and niacinamide work in synergy to fade dark spots and reveal a luminous, even-toned complexion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== TESTIMONIALS SECTION ======================== -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label animate-on-scroll fade-up">Client Love</span>
+                <h2 class="section-title animate-on-scroll fade-up delay-1">
+                    What Our <span class="text-accent">Clients</span> Say
+                </h2>
+            </div>
+
+            <!-- Carousel -->
+            <div class="carousel animate-on-scroll fade-up delay-2" id="testimonialCarousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "The Revitalizing Face Serum has completely transformed my skincare routine. 
+                            My skin feels firmer, brighter, and so incredibly hydrated. I've received 
+                            more compliments in the past month than ever before."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="--hue: 30;">A</div>
+                            <div class="author-info">
+                                <span class="author-name">Amelia Chen</span>
+                                <span class="author-role">Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "As someone with extremely sensitive skin, finding the right moisturizer 
+                            was always a challenge. Let's Glow changed that. Zero irritation, maximum 
+                            hydration — it's truly a premium experience."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="--hue: 340;">S</div>
+                            <div class="author-info">
+                                <span class="author-name">Sophia Laurent</span>
+                                <span class="author-role">Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "The SPF 50 suncream is unlike anything I've tried — lightweight, 
+                            invisible on the skin, and no white cast. It's become my daily essential. 
+                            Incredible quality and elegant packaging."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="--hue: 200;">M</div>
+                            <div class="author-info">
+                                <span class="author-name">Marcus Rivera</span>
+                                <span class="author-role">Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "I gifted the entire collection to my mother and she was absolutely delighted. 
+                            The results were visible within weeks — her skin looks healthier, more even, 
+                            and radiant. Truly premium skincare."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="--hue: 150;">E</div>
+                            <div class="author-info">
+                                <span class="author-name">Elena Vasquez</span>
+                                <span class="author-role">Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CONTACT SECTION ======================== -->
+    <section id="contact" class="section contact" data-parallax="0.1">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info animate-on-scroll fade-right">
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="section-title">
+                        We'd Love to<br><span class="text-accent">Hear from You</span>
+                    </h2>
+                    <p class="contact-text">
+                        Whether you have a question about our products, need skincare advice, 
+                        or simply want to share your experience — our team is here for you.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">✉</span>
+                            <span>hello@letsglow.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">☏</span>
+                            <span>+1 (800) GLOW-NOW</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⚲</span>
+                            <span>New York, NY 10001</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form animate-on-scroll fade-left" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-input form-textarea" placeholder="Tell us how we can help..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading">
+                            <span class="spinner"></span> Sending...
+                        </span>
+                        <span class="btn-success">✓ Sent!</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo footer-logo">
+                        <span class="logo-icon">✦</span> Let's Glow
+                    </a>
+                    <p class="footer-tagline">Illuminate your natural beauty with science-backed skincare crafted for radiance.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M13.232 10.232L20 4"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Pinterest">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 21c1.5-3 2-5 2.5-7.5.5 1 1.5 1.5 3 1.5 3.5 0 6-3 6-7 0-3.5-3-6-7-6s-7 2.5-7 6c0 1.5.5 3 2 4"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Face Serums</a></li>
+                        <li><a href="#">Moisturizers</a></li>
+                        <li><a href="#">Sun Protection</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Ingredients</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="newsletter-text">Subscribe for skincare tips and exclusive offers.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Your email" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe">→</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Let's Glow. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
